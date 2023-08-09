@@ -1,6 +1,6 @@
 set -e
 
-cp .env.example .env
+cp /src/.env.example /src/.env
 
 docker-compose run --rm artisan key:generate
 
