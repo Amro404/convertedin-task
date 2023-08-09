@@ -38,7 +38,7 @@ shell ```sh ./start.sh``` this command will do the following
 2. Tasks list page ```/admin/users/tasks``` ```GET```
 3. The statistics page ```/admin/users/tasks/statistics``` ```GET```
 ##
-and one route for persist the task in the DB
+and one route for persist the task in the DB <br>
 4. Store the task ```/admin/tasks/create```  ```POST```
 ##
 
