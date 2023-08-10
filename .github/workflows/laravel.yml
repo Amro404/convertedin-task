@@ -19,6 +19,7 @@
           run: php -r "file_exists('./src/.env') || copy('./src/.env.example', './src/.env');"
         - name: Install Dependencies
           run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+          working-directory: ./src
         - name: Generate key
           run: php src/artisan key:generate
         - name: Directory Permissions
