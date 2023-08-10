@@ -32,6 +32,4 @@
           env:
             DB_CONNECTION: sqlite
             DB_DATABASE: src/database/database.sqlite
-          run: php src/artisan migrate --force --no-interaction
-        - name: Run Tests
-          run: php src/vendor/bin/phpunit
+          run: cd ./src && ./vendor/bin/phpunit
