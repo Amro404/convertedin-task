@@ -31,7 +31,7 @@
         - name: Execute tests (Unit and Feature tests) via PHPUnit
           env:
             DB_CONNECTION: sqlite
-            DB_DATABASE: database/database.sqlite
+            DB_DATABASE: src/database/database.sqlite
           run: php src/artisan migrate --force --no-interaction
         - name: Run Tests
           run: ./src/vendor/bin/phpunit
