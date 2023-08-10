@@ -8,5 +8,5 @@ use Illuminate\Support\Collection;
 interface StatisticRepositoryInterface
 {
     public function updateOrInsert(int $userId, int $tasksCount): bool;
-    public function getTopUsersTasksCount(): Collection;
+    public function getTopUsersTasksCount(): ?Collection;
 }

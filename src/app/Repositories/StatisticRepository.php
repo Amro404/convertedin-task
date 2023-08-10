@@ -23,7 +23,7 @@ class StatisticRepository implements StatisticRepositoryInterface
         return DB::table($this->table)->updateOrInsert($uniqueBy, $values);
     }
 
-    public function getTopUsersTasksCount(): Collection
+    public function getTopUsersTasksCount(): ?Collection
     {
         return DB::table($this->table)
             ->select(
