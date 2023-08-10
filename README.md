@@ -62,3 +62,6 @@ shell
 To run all unit tests, use the following command:
 shell
 ``` docker-compose run --rm php vendor/bin/phpunit ```
+##
+also I configured Github actions to run tests after each commit you can find the configuration ```yaml``` file under this directory: <br>
+``` ./github/workflows/laravel.yml```
