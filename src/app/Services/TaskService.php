@@ -6,7 +6,6 @@ namespace App\Services;
 
 use App\Repositories\TaskRepositoryInterface;
 use Illuminate\Database\Query\Builder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 
@@ -19,14 +18,11 @@ class TaskService implements TaskServiceInterface
         $this->taskRepository = $taskRepository;
     }
 
-    public function createTask($attributes): void
+    public function createTask(array $attributes): void
     {
-        DB::beginTransaction();
         try {
             $this->taskRepository->create($attributes);
-            DB::commit();
         } catch (\Exception $exception) {
-            DB::rollBack();
             throw $exception;
         }
 

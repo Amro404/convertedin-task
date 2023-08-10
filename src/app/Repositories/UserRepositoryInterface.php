@@ -10,5 +10,4 @@ interface UserRepositoryInterface
 {
     public function getUsers(): ?Collection;
     public function getAdmins(): ?Collection;
-
 }

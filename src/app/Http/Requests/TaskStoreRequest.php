@@ -25,8 +25,8 @@ class TaskStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string',
-            'description' => 'required|string',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
             'assigned_to_id' => ['required', 'int', Rule::exists('users', 'id')
                 ->where(function ($query) {
                         $query->where('is_admin', false);
