@@ -34,4 +34,4 @@
             DB_DATABASE: src/database/database.sqlite
           run: php src/artisan migrate --force --no-interaction
         - name: Run Tests
-          run: ./src/vendor/bin/phpunit
+          run: php src/vendor/bin/phpunit
