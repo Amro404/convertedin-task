@@ -42,6 +42,7 @@ class TaskRepository implements TaskRepositoryInterface
     {
         return DB::table($this->table)
             ->select([
+                'id',
                 'assigned_to_id AS user_id',
                 DB::raw('COUNT(tasks.id) AS tasks_count')
             ])
