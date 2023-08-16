@@ -46,7 +46,7 @@ class TaskRepository implements TaskRepositoryInterface
                 'assigned_to_id AS user_id',
                 DB::raw('COUNT(tasks.id) AS tasks_count')
             ])
-            ->groupBy('user_id')
+            ->groupBy('user_id', 'id')
             ->orderBy('id');
     }
 
