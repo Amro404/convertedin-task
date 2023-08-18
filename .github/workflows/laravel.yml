@@ -34,13 +34,14 @@
             DB_DATABASE: src/database/database.sqlite
           run: cd ./src && ./vendor/bin/phpunit
     deploy:
-      runs-on: ubuntu-22.04
-      steps:
-        - name: Deploy to AWS
+      name: Deploy to AWS
+        runs-on: ubuntu-22.04
+        steps:
+          - name: Deploy
             uses: appleboy/ssh-action@v0.1.8
             with:
-              host: 54.80.241.149
+              host: 54.160.249.168
               port: 22
               username: laracasts
               keys: ${{secrets.PRIVATE_KEY}}
-              script: "cd www/src; git pull origin main"
+              script: "cd www; git pull origin main"
