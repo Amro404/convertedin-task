@@ -22,7 +22,9 @@ use App\Http\Controllers\Admin\Tasks\Statistics\IndexController as StatisticInde
 
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+
+    return "HELLO FROM FIRST CI/CD";
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
