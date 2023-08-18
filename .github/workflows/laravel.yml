@@ -34,10 +34,9 @@
             DB_DATABASE: src/database/database.sqlite
           run: cd ./src && ./vendor/bin/phpunit
     deploy:
-      name: Deploy to AWS
       runs-on: ubuntu-22.04
-        steps:
-        - name: Deploy
+      steps:
+        - name: Deploy to AWS
             uses: appleboy/ssh-action@v0.1.8
             with:
               host: 54.80.241.149
