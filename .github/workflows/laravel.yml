@@ -52,6 +52,6 @@ jobs:
         with:
           host: 54.80.241.149
           port: 22
-          username: laracasts
+          username: convertedin
           key: ${{ secrets.PRIVATE_KEY }}
           script: "cd www && git pull origin main"
