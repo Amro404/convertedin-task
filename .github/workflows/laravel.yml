@@ -33,7 +33,6 @@
             DB_CONNECTION: sqlite
             DB_DATABASE: src/database/database.sqlite
           run: cd ./src && ./vendor/bin/phpunit
-
         - name: Deploy to AWS
           runs-on: ubuntu-22.04
           steps:
